@@ -13,7 +13,7 @@ public class LightBoard
     /* to be implemented in part (a) */
     lights = new boolean [numRows][numCols];
   for(int i = 0; i < numRows; i++){
-    for(int k = 0; k < numCOls; i++){
+    for(int k = 0; k < numCols; i++){
       double s = Math.Random();
       lights[i][k] = s < 0.4;
     }
