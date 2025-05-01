@@ -11,7 +11,13 @@ public class LightBoard
   public LightBoard(int numRows, int numCols)
   {
     /* to be implemented in part (a) */
-
+    lights = new boolean [numRows][numCols];
+  for(int i = 0; i < numRows; i++){
+    for(int k = 0; k < numCOls; i++){
+      double s = Math.Random();
+      lights[i][k] = s < 0.4;
+    }
+  }
   }
 
   /** Evaluates a light in row index row and column index col and returns a status
@@ -21,8 +27,19 @@ public class LightBoard
   public boolean evaluateLight(int row, int col)
   {
     /* to be implemented in part (b) */
-   
- 
+   int numo = 0;
+    for(int i = 0; i < lights.length; i++){
+      if(lights[i][col]){
+        numo++;
+      }
+    }
+    if(lights[row][col] && numo % 2 ==0){
+      return false;
+    }
+   if(!lights[row][col] && numo % 3==0){
+     return true;
+   }
+return lights[row][col];
   }
   public boolean[][] getLights()
   {
