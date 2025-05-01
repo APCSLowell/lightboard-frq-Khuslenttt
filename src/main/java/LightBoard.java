@@ -14,7 +14,7 @@ public class LightBoard
     lights = new boolean [numRows][numCols];
   for(int i = 0; i < numRows; i++){
     for(int k = 0; k < numCols; i++){
-      double s = Math.Random();
+      double s = Math.random();
       lights[i][k] = s < 0.4;
     }
   }
