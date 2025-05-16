@@ -28,15 +28,15 @@ public class LightBoard
   {
     /* to be implemented in part (b) */
    int numo = 0;
-    for(int i = 0; i < lights.length; i++){
-      if(lights[i][col]){
+    for(int r = 0; r < lights.length; r++){
+      if(lights[r][col]){
         numo++;
       }
     }
-    if(lights[row][col] && numo % 2 ==0){
+    if(lights[row][col] && numo % 2 == 0){
       return false;
     }
-   if(!lights[row][col] && numo % 3==0){
+   if(!lights[row][col] && numo % 3 == 0){
      return true;
    }
 return lights[row][col];
