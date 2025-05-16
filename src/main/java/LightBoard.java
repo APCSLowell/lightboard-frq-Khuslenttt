@@ -13,7 +13,7 @@ public class LightBoard
     /* to be implemented in part (a) */
     lights = new boolean [numRows][numCols];
   for(int i = 0; i < numRows; i++){
-    for(int k = 0; k < numCols; i++){
+    for(int k = 0; k < numCols; k++){
       double s = Math.random();
       lights[i][k] = s < 0.4;
     }
@@ -29,7 +29,8 @@ public class LightBoard
     /* to be implemented in part (b) */
    int numo = 0;
     for(int r = 0; r < lights.length; r++){
-      if(lights[r][col]){
+      if(lights[r][col])
+      {
         numo++;
       }
     }
@@ -39,7 +40,7 @@ public class LightBoard
    if(!lights[row][col] && numo % 3 == 0){
      return true;
    }
-return lights[row][col];
+    return lights[row][col];
   }
   public boolean[][] getLights()
   {
